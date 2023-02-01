@@ -5,6 +5,7 @@ require("dotenv").config({ path: "./.env" });
 
 const app = express();
 app.use(express.json());
+app.use(express.static("public"));
 connect();
 app.use(cors());
 app.use("/user", require("./routes/userRoutes"));
